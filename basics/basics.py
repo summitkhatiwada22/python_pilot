@@ -1,34 +1,3 @@
-# touch <filename>
-# creates a file in the scurrent directory
-
-# pwd
-# shows the current working directory
-
-# echo <content>
-# displays the content
-
-# echo (content) > <filename>
-# saves the content in the filename
-
-# mv <old_filename> <new_filename>
-# rename filename
-
-# rm <filename>
-# deletes particular file
-
-# rm -r <foldername>
-# deletes the filder and all it's content
-
-# use option and click where to write to write in multiple places at once
-
-# there is no limit in integer length or anything in python
-
-# git log --oneline -> to see all commits in one line
-
-# option+shift+down arrow -> copies the same line down
-
-# git rm --chached course/c01   -> to ignore already tracked file. Use --cached otherwise local will also be delered
-
 # PRTINTING
 
 print("hello world")
@@ -62,6 +31,8 @@ COMPANY_NAME = 'The Vedic Medic LLC'
 # integer
 x = 6
 y = -6
+
+# there is no limit in integer length or anything in python
 
 # binary representation
 bin_1 = 0b1010
@@ -99,11 +70,31 @@ internet_status = True
 retired = False
 
 
-###
-# TODO - Missed string session here. Complete them.
+# STRINGS
 
+my_name = 'Summit Khatiwada'
+desc = 'Summit said, "Hi!".'
+print(my_name + " " + desc) # This is string concatination
 # string concatination can only add string. So you will have to convert int to string before adding.
-###
+
+# multi-line string
+essay = '''Hi there
+how are you doing?'''
+print(essay)
+
+# escape characters
+print ('This is a first line. \n This is a second line')
+print ('I\'m Summit.')  # to use '
+
+# string length
+paragraph = 'a quick brown fox jumpes over the lazy dog.'
+print(paragraph.__len__())  # method 1
+print(len(paragraph))   # method 2
+
+print(paragraph.capitalize())   # to capitalize
+print(paragraph.upper())   # to upper case
+print(paragraph.lower())   # to lower case
+
 
 
 # STRING FORMATTING
