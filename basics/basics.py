@@ -141,3 +141,44 @@ print('My name is {full_name}. I live in {add} and my lucky number is {:->5d}'.f
 (number, full_name=name, add=address))
 
 
+# f-strings
+place = 'Kathmandu'
+# f strings do not start with quotation but with f
+place_2 = f'Pokhara'  # f states that it is a formatted string
+destination = f"Our first destination is {place} and second is {place_2}"
+print(destination)
+age = 55
+# padding in fstring
+print(f"My age is {age:10d}")
+# padding and expression in fstring
+print(f"My age is {(age+10):10d}")
+print(f"Our first destination is {place.ljust(20)} and second is {place_2.ljust(20)}")
+# expression in fstring
+print(f"My age is {age + 10}")
+
+
+# Methods in string
+# 1. Finding out the length
+name = 'John'
+print(len(name))
+print(name.__len__())
+
+# 2. Finding data type
+age = "12"
+print(type(age))
+
+# 3. Checking if the string is numeric
+print(age.isnumeric())  # Gives True or False
+
+# 4. Checking if the string is decimal
+print(age.isdecimal())  # Gives True or False
+
+# 5. replace method
+sentence = 'I am Sam and I am 20 years old.'
+new_name = 'Samuel'
+print(sentence)
+new_sentence = f"I am {new_name} and I am 20 years old."
+print(new_sentence)
+print(sentence.replace('Sam', new_name)) 
+print(sentence.replace('Sam', new_name, 3)) 
+
