@@ -30,3 +30,9 @@
 
 ### git rm --chached course/c01   
 > to ignore already tracked file. Use --cached otherwise local will also be delered
+
+### command + /  
+> comments the typed line
+
+### shift + option + f
+> auto formatting

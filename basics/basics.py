@@ -3,7 +3,9 @@
 print("hello world")
 
 
+
 # VARIABLES
+
 # checkout PEP for python standards
 x = 5       # x <- 5, x is an identifier storing 5 for now
 _x = 50     # variables startingwith _ are protected
@@ -17,12 +19,14 @@ NameOne = 'Khatiwada'   # upper camel case
 name_one = 'Summit Khatiwada'   # use _ to separate variables
 
 
+
 # CONSTANTS
 # use upper case variable to make it a constant
 # its just a convention, the value can be changed, but dont change
 PI = 3.1415
 PROJECT_VERSION = '1.0.0'
 COMPANY_NAME = 'The Vedic Medic LLC'
+
 
 
 # DATA TYPES
@@ -70,6 +74,7 @@ internet_status = True
 retired = False
 
 
+
 # STRINGS
 
 my_name = 'Summit Khatiwada'
@@ -98,6 +103,7 @@ print(paragraph.lower())   # to lower case
 
 
 # STRING FORMATTING
+
 age = 20    # %d for int - %[a]d
 height = 6.0    # %f for float - %[a].[b]f
 f_name = 'Summit'   # %s for string
@@ -117,7 +123,7 @@ print("My weight is %5.2f" %weight)    # using %[a].[b]f, a is the preceeding sp
 print("My weight is %5.2f" %weight)    # using %[a].[b]f, a is the preceeding spaces, its called space padding
 
 
-# FORMAT METHOD
+# format method
 
 # templating
 # we use curly bracket for adding a placeholder
@@ -173,7 +179,15 @@ print(age.isnumeric())  # Gives True or False
 # 4. Checking if the string is decimal
 print(age.isdecimal())  # Gives True or False
 
-# 5. replace method
+# 5. Checking if a word is alphabetic
+word = "ABC"
+print(word.isalpha())
+
+# 6. Checking if a word is alphanumeric
+word = "ABC22"
+print(word.isalnum())
+
+# 7. replace method
 sentence = 'I am Sam and I am 20 years old.'
 new_name = 'Samuel'
 print(sentence)
@@ -181,4 +195,65 @@ new_sentence = f"I am {new_name} and I am 20 years old."
 print(new_sentence)
 print(sentence.replace('Sam', new_name)) 
 print(sentence.replace('Sam', new_name, 3)) 
+
+
+
+# TEXT JUSTIFICATION
+
+# left justification
+_mood = 'Jolly'
+justified = _mood.ljust(50)
+print(justified, 'here')
+
+# left justification with dash ---
+_mood = 'Jolly'
+justified = _mood.ljust(50, '-')
+print(justified, 'here')
+
+# right justification
+justified= _mood.rjust(50)
+print(justified)
+
+# center alignment
+justified= _mood.center(50)
+print(justified)
+
+# Download Bar
+width = 100
+downloaded = 20
+bar_content = f'[{("#" * downloaded).ljust(width, ".")}]'
+print(bar_content)
+
+# finding the index of a substring
+data = 'I am a quite cool.'
+print(data.index('cool'))
+#checking if it starts with the substring
+print(data.startswith('My'))
+
+# trimming spaces
+data = '    I am a quite cool.          '
+print(data.strip())
+
+#  EXTRACTING SUBSTRING FROM A STRING
+
+text = "Hello, I am john"
+# extracting single character
+print(text[0])  # gives 'H'
+print(text[7])  # gievs 'I'
+
+# it can also be accesed by negative indexing
+print(text[-1])  # gievs 'n'
+
+# extracting more than one characters
+print(text[0:5])  # gives 'Hello', need to input one more index
+print(text[:5])  # gives 'Hello', need to input one more index
+print(text[7:]) # gives everything after 7
+print(text[-9:-5]) # In negative index, start with smaller number, its opposite
+print(text[7:-5]) # Can also use both negative and positive indexing
+
+# extracting substring with step
+print(text[0:5:2])  # prints 'Hlo', prinnts in two steps
+print(text[::2])
+print(text[4::-1]) #reverses the string, olleH
+print(text[::-1]) #reverses reverses everything
 
